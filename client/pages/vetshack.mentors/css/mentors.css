@@ -1,0 +1,21 @@
+#List-Parent {
+  width: 70%;
+  margin-left: 10%;
+}
+
+#Filter-Parent {
+  margin: 5%;
+}
+
+.filter-list {
+  list-style: none;
+}
+
+.mentors {
+  margin-left: 40%;
+}
+
+.list-tile-parent {
+  border: 3px solid #73AD21;
+  padding: 10px;
+}

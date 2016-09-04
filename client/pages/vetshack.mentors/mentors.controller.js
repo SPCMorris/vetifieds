@@ -3,6 +3,8 @@ const MentorsController = function(Mentors, $state) {
 
   vm.getMentors = Mentors.test;
 
+  vm.getFilters = Mentors.testFilter;
+
   vm.onClickMentor = (mentorId) => {
     console.log("Mentors ID: ", mentorId);
     // once routing is complete pass in mentorId

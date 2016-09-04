@@ -1,4 +1,5 @@
 const Mentors = function($http, $q) {
+  const data = {};
   const url = 'localhost:1337/#/';
 
   const service = {
@@ -13,7 +14,8 @@ const Mentors = function($http, $q) {
           console.log(err);
           return err;
         } else {
-          return resp.data;
+          data = resp.data;
+          return data;
         }
       })
       .catch((err) => {
@@ -36,6 +38,17 @@ const Mentors = function($http, $q) {
       }
       ];
       return mentors;
+    },
+    testFilter: () => {
+      let filters = [];
+      if(data) {
+        for(let i = 0; i < data.length; i++) {
+          filters.push(data[i].type);
+        }
+        return filters;
+      } else {
+        return filters;
+      }
     }
   };
 
