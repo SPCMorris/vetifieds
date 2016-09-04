@@ -1,13 +1,11 @@
-const Mentors = function($http, $q) {
-  const data = {};
-  const url = 'localhost:1337/#/';
+const Mentors = function($http, $q, data) {
 
   const service = {
     
     fetchLocalMentors: (location) => {
       return $http({
         method: 'GET',
-        url: url + '/mentor/' + location
+        url: 'api/mentors/' + location
       })
       .then((resp, err) => {
         if(err) {
@@ -40,7 +38,7 @@ const Mentors = function($http, $q) {
       return mentors;
     },
     testFilter: () => {
-      let filters = [];
+      const filters = [];
       if(data) {
         for(let i = 0; i < data.length; i++) {
           filters.push(data[i].type);

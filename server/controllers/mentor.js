@@ -15,7 +15,7 @@ module.exports = (function() {
 
   router.get('/:location', function(req, res) {
 
-    if (!authHelper.isAuthenticated()) return res.status(401).send('User unauthorized');
+    // if (!authHelper.isAuthenticated()) return res.status(401).send('User unauthorized');
 
     let getMentors = Q.nbind(Mentor.find, Mentor);
     getMentors({
